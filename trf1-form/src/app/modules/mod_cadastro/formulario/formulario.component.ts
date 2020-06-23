@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
+import {FormBuilder,FormGroup, FormControl} from '@angular/forms';
+
 @Component({
   selector: 'app-formulario',
   templateUrl: './formulario.component.html',
@@ -7,9 +9,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FormularioComponent implements OnInit {
 
-  constructor() { }
+  formulario;
 
-  ngOnInit(): void {
+  constructor(private formBuilder : FormBuilder) {
+   
+     this.formulario = formBuilder.group({});
+
   }
+
+  ngOnInit(): void {}
 
 }
